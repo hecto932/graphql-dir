@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon -e js,graphql index"
+    "dev": "nodemon -e js,graphql index",
+    "lint": "standard",
+    "lint-fix": "standard --fix"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,8 @@
     "express-graphql": "^0.8.0",
     "graphql": "^14.3.0",
     "nodemon": "^1.19.0"
+  },
+  "devDependencies": {
+    "standard": "^12.0.1"
   }
 }
