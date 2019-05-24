@@ -1,5 +1,5 @@
 type Course {
-  _id: ID!,
+  _id: ID!
   title: String!
   teacher: String
   description: String!
@@ -11,4 +11,16 @@ type Query {
 
   "Return a course"
   getCourse(id: ID!): Course
+}
+
+input CourseInput {
+  title: String!
+  teacher: String
+  description: String!
+  topic: String
+}
+
+type Mutation {
+  "Create a course"
+  createCourse(input: CourseInput!): Course
 }
