@@ -23,6 +23,7 @@ const typeDefs = readFileSync(
 const schema = makeExecutableSchema({ typeDefs, resolvers });
 
 app.use(cors());
+app.use('/', express.static(join(__dirname, 'public')))
 
 app.use(
   "/api",
